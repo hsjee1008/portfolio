@@ -157,7 +157,37 @@ section>a:hover{
     margin-left: 50px;
     display: flex;
     flex-direction: row;
+    animation-duration: 1s;
+    animation-name: down;
     align-items: center;
+
+}
+
+.pictureme2{
+    width:200px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    animation-duration: 1s;
+    animation-name: lef;
+    align-items: center;
+
+}
+
+.pic2{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    
+    align-items: center;
+    top:-100px;
+    left:-20px;
+
+}
+
+.pictureme2:hover{
+    width:250px;
+    transition:0.3s;
 }
 .pictureme:hover{
     width:250px;
@@ -171,13 +201,56 @@ section>a:hover{
     display: flex;
     flex-direction: row;
     position:relative;
-    animation-duration: 1s;
-    animation-name: up;
+    margin-bottom: 0px;
     align-items: center;
-    top:-100px;
 
+    left:-20px;
+    top:-80px;
 }
 
+.but{
+    position:relative;
+    top:-250px;
+}
+.introduction{
+    position: relative;
+    top:-200px;
+    width:70%;
+    border-top: 0.1px solid white;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 50;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding: 0px 0;
+}
+
+.introduction>a{
+    color:white;
+    text-decoration: none;
+}
+
+.but{
+    border:1px solid white;
+    background-color: #333;
+    color:white;
+    padding:5px;
+    font-family: 'Noto Sans KR',sans-serif;
+    border-radius: 5px;
+    margin-top:0px;
+}
+.but:hover{
+    background-color: white;
+    color:black;
+    letter-spacing: 1px;
+    transition:0.3s;
+}
+.introduction>a:hover{
+    color:gray;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    transition: 0.3s;
+}
 .hafs{
     color:white;
     text-decoration: none;
@@ -188,7 +261,13 @@ section>a:hover{
     transition:0.3s;
 }
 
-
+.hihi:hover{
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+section>p>a{
+    text-decoration: underline;
+}
 @keyframes lef{
     from{
         margin-left:0px;
