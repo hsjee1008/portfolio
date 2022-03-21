@@ -7,14 +7,24 @@
     max-width:700px;
     margin:0 auto;
     box-sizing: border-box;
-    height:100vh;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
+.domain{
+    margin-left: 503.5px;
+    margin-top:-167.5px;
+}
+
+.nav{
+    margin-top: -167.5px;
+    margin-right: 503.5px;
+}
 header{
+    position: fixed;
+    top:100px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -28,40 +38,68 @@ header>a{
     text-decoration: none;
 }
 
+.album:hover{
+    background-color: gray;
+}
 header>a:hover{
     letter-spacing: 1px;
     font-size: 1.6rem;
     transition:0.5s;
 }
 
-@media screen and (max-width:600px){
-    header{
-        flex-direction: column;
-    }
-    .container{
-        position: static;
-    }
-    .pictureme{
-        margin-top: 150px;
-        width:300px;
-    }
-    .info{
-        margin-top: 150px;
-        font-weight: 50;
-        font-size: 10px;
-    }
-    .introduction{
-        margin-top: 200px;
-        letter-spacing: 0px;
-    }
-    button{
-        margin-top:500px;
-    }
+.current{
+    color:rgb(124, 124, 124);
 }
 
-@media screen and (max-height:1200px){
+.current:hover{
+    letter-spacing: 1px;
+    text-decoration: underline 3px rgb(124, 124, 124);
+    transition: 0.3s;
+}
+
+
+.pic{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top:3px;
 
 }
+.pictureme{
+    margin-top: 120px;
+    margin-right: 10px;
+    margin-left: 485px;
+    width: 13.5%;
+    margin-bottom: 0px;
+}
+
+.pictureme:hover{
+    width:15%;
+    transition: 0.5s;
+}
+.info{
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+    margin-top:120px;
+    margin-bottom: 0px;
+}
+
+
+.introduction{
+    max-height: 700px;
+    max-width: 700px;
+    margin-top:43px;
+    margin-left: 405px;
+    border-top: 0.1px solid white;
+    letter-spacing: 5px;
+    font-size: 15px;
+    font-weight: 50;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding: 0px 0;
+}
+
 header>ul{
     display: flex;
 }
@@ -86,7 +124,18 @@ header>ul>li>a:hover{
 
 }
 
-
+@keyframes sc{
+    from{
+        transform: scale(0.95);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.page1{
+    animation-name:sc;
+    animation-duration: 1s;
+}
 header>p:hover{
     
     transition: 0.3s
@@ -99,7 +148,7 @@ body{
 
 @keyframes down{
     from{
-        margin-top:-5%
+        margin-top:-1%
     }
     to{
         margin-top:0%;
@@ -119,6 +168,7 @@ section{
     padding: 0 3rem;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 250px;
 
 }
 
@@ -174,50 +224,9 @@ section>a:hover{
     flex-direction: row;
     align-items: center;
 }
-.pictureme{
-    width:200px;
-    margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-    animation-duration: 1s;
-    animation-name: down;
-    align-items: center;
 
-}
 
-.pictureme:hover{
-    width:250px;
-    transition:0.3s;
-}
 
-.info{
-    margin-left: 20px;
-}
-.pic{
-    display: flex;
-    flex-direction: row;
-    position:relative;
-    margin-bottom: 0px;
-    align-items: center;
-    max-width: 700px;
-    left:-20px;
-    top:20px;
-}
-
-.introduction{
-    max-height: 700px;
-    max-width: 700px;
-    position: relative;
-    top:-70px;
-    width:70%;
-    border-top: 0.1px solid white;
-    letter-spacing: 5px;
-    font-size: 15px;
-    font-weight: 50;
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
-    padding: 0px 0;
-}
 
 .introduction>a{
     color:white;
@@ -232,9 +241,7 @@ section>a:hover{
     font-family: 'Noto Sans KR',sans-serif;
     border-radius: 5px;
     margin-top:0px;
-    position: relative;
-    top:-539px;
-    left:250px;
+
 }
 .but:hover{
     background-color: white;
@@ -243,22 +250,41 @@ section>a:hover{
     transition:0.3s;
 }
 
-.butt{
+.archieve{
+    display: flex;
+    flex-direction: column;
+    margin-top:60px;
+    
+}
+
+.article{
     display: flex;
     flex-direction: row;
     
 }
-.diary{
-    position:relative;
-    top:-300px;
-    background-color: #333;
-    color:white;
-    padding:5px;
-    font-family: 'Noto-Sans KR', sans-serif;
-    border-radius: 5px;
-    margin-top: 0px;
-    font-size: 15px;
-    margin-left : 10px;
+
+.arti-comment{
+    text-align: left;
+    margin-left: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+a[title="articomment"]{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.thumbnail{
+    width:25%;
+    
+    margin-left: 200px;
+}
+
+.thumbnail:hover{
+    width:30%;
+    transition: 0.5s;
 }
 
 .fam{
@@ -282,6 +308,25 @@ section>a:hover{
 .hafs{
     color:white;
     text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+#wrap .page {
+    scroll-snap-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    font-size: 70px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
 }
 
 .hafs:hover{
@@ -318,7 +363,7 @@ section>p>a{
         margin-left:0px;
     }
     to{
-        margin-left:50px;
+        margin-left:24px;
     }
 }
 
@@ -327,7 +372,7 @@ section>p>a{
         margin-right: 0px;
     }
     to{
-        margin-right: 50px;
+        margin-right: 24px;
     }
 }
 
